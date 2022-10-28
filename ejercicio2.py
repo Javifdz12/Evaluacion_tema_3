@@ -7,7 +7,7 @@ class ejercicio2:
         return det
     def regla_sarrus_recursiva(self):
         det=np.linalg.det(self.matriz)
-        return int(det)
+        return det
     def ejecutar(self):
         print(self.regla_sarrus_iterativa())
         print(self.regla_sarrus_recursiva())

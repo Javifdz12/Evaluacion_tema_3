@@ -2,6 +2,8 @@ import ejercicio1
 from ejercicio2 import ejercicio2
 from ejercicio3 import ejercicio3,nave
 import helpers
+import ejercicio4
+import ejercicio5
 
 
 def menu():
