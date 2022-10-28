@@ -8,13 +8,6 @@ class nave:
     def mostrar_informacion(self):
         return f'Nombre:{self.nombre}\nLargo:{self.largo}\nTripulacion:{self.tripulacion}\nCantidad pasajeros:{self.cantidad_pasajeros}'
 
-nave1=nave('Halcon milenario',60,10,50)
-nave2=nave('Estrella de la Muerte',20000,2000,5000)
-nave3=nave('AT1',40,3,5)
-nave4=nave('AT2',40,3,5)
-nave5=nave('AT3',40,3,5)
-nave6=nave('AT4',40,3,5)
-lista_naves=[nave1,nave2,nave3,nave4,nave5,nave6]
 class ejercicio3:
     def __init__(self,lista_naves):
         self.naves=lista_naves

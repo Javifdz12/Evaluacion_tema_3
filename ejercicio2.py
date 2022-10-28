@@ -12,6 +12,4 @@ class ejercicio2:
         print(self.regla_sarrus_iterativa())
         print(self.regla_sarrus_recursiva())
 
-m=[[1,1,1],[1,0,1],[0,1,0]]
-ej=ejercicio2(m)
-ej.ejecutar()
+
