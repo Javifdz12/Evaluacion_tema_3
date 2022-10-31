@@ -1,9 +1,9 @@
-import ejercicio1
+from ejercicio1 import ejercicio1,plataforma,crear_list
 from ejercicio2 import ejercicio2
 from ejercicio3 import ejercicio3,nave
 import helpers
 import ejercicio4
-import ejercicio5
+from ejercicio5 import ejercicio5
 
 
 def menu():
@@ -19,6 +19,8 @@ def menu():
     print("========================")
 
 def iniciar():
+    plat=plataforma(crear_list(74),[],[])
+    ej1=ejercicio1(plat)
     m=[[1,1,1],[1,0,1],[0,1,0]]
     ej2=ejercicio2(m)
     nave1=nave('Halcon milenario',60,10,50)
@@ -29,6 +31,7 @@ def iniciar():
     nave6=nave('AT4',40,3,5)
     lista_naves=[nave1,nave2,nave3,nave4,nave5,nave6]
     ej3=ejercicio3(lista_naves)
+    ej5=ejercicio5()
 
     while True:
 
@@ -37,7 +40,7 @@ def iniciar():
         helpers.limpiar_pantalla()
 
         if opcion == 1:
-            pass
+            ej1.ejecutar()
 
         if opcion == 2:
             ej2.ejecutar()
@@ -45,11 +48,11 @@ def iniciar():
         if opcion == 3:
             ej3.ejecutar()
 
-        if opcion==4:
+        if opcion == 4:
             pass
 
-        if opcion==5:
-            pass
+        if opcion == 5:
+            ej5.ejecutar()
 
         if opcion == 6:
             print("Saliendo...\n")

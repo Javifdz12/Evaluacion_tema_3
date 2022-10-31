@@ -25,9 +25,6 @@ class ejercicio1:
         self.plataforma.mover_discos(self.plataforma.aguja1,self.plataforma.aguja2)
         self.plataforma.mover_discos(self.plataforma.aguja2,self.plataforma.aguja3)
 
-plat=plataforma(crear_list(74),[],[])
-ej1=ejercicio1(plat)
-ej1.ejecutar()
 
 
 
