@@ -42,18 +42,20 @@ def iniciar():
         if opcion == 1:
             ej1.ejecutar()
 
-        if opcion == 2:
+        elif opcion == 2:
             ej2.ejecutar()
 
-        if opcion == 3:
+        elif opcion == 3:
             ej3.ejecutar()
 
-        if opcion == 4:
+        elif opcion == 4:
             pass
 
-        if opcion == 5:
+        elif opcion == 5:
             ej5.ejecutar()
 
-        if opcion == 6:
+        elif opcion == 6:
             print("Saliendo...\n")
             break
+        else:
+            print('No existe esa opcion')
