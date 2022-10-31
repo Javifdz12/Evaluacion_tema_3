@@ -6,11 +6,11 @@ class ejercicio2:
     def regla_sarrus_iterativa(self):
         det=self.matriz[0][0]*self.matriz[1][1]*self.matriz[2][2]+self.matriz[1][0]*self.matriz[2][1]*self.matriz[0][2]+self.matriz[0][1]*self.matriz[1][2]*self.matriz[2][0]-(self.matriz[0][2]*self.matriz[1][1]*self.matriz[2][0]+self.matriz[2][1]*self.matriz[1][2]*self.matriz[0][0]+self.matriz[0][1]*self.matriz[1][0]*self.matriz[2][2])
         return det
-    def regla_sarrus_recursiva(self):
+    def regla_sarrus_recursiva(self,matriz):
         suma=0
-        for i in range(len(self.matriz)): # Itero sobre las columnas
-            aux = copy.deepcopy(self.matriz) # Duplico la matriz para no modificar la original y poder hacer los cálculos bien 
-            aux.remove(self.matriz[0]) #Elimino la primera fila
+        for i in range(len(matriz)): # Itero sobre las columnas
+            aux = copy.deepcopy(matriz) # Duplico la matriz para no modificar la original y poder hacer los cálculos bien 
+            aux.remove(matriz[0]) #Elimino la primera fila
             for j in range(len(aux)): #Me muevo por las filas restantes 
                 #Creo submatrices sin tener en cuenta la columna actual pero sí la fila
                 aux[j] = aux[j][0:i] + aux[j][i+1:]
@@ -19,6 +19,6 @@ class ejercicio2:
         return suma
     def ejecutar(self):
         print(self.regla_sarrus_iterativa())
-        print(self.regla_sarrus_recursiva())
+        print(self.regla_sarrus_recursiva(self.matriz))
 
 

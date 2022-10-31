@@ -60,7 +60,7 @@ class ejercicio5:
         x=input('¿Que mensaje quieres encriptar y despues probar si podemos desencriptarlo?: ')
         print(self.cifrar_sha256(x))
         self.descifrar(self.cifrar_sha256(x),'sha256')
-        print('---------Cifrados Tabla ASCII-----------')
+        print('\n---------Cifrados Tabla ASCII-----------')
         print(self.Preparar_cifrados_ascii())
         print(print('\n---------Descifrados Tabla ASCII-----------'))
         print(self.Preparar_descifrados_ascii())
