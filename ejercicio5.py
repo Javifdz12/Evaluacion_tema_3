@@ -1,16 +1,14 @@
 import hashlib
 import pandas as pd
 class ejercicio5:
-    def __init__(self):
-        pass
 
     def cifrar_sha256(self,contenido):
         pals=contenido.split(maxsplit=4)
         m=hashlib.sha256()
         for p in pals:
             m.update(p.encode('ASCII',errors='ignore'))
-            s=m.hexdigest()
-            return s
+        s=m.hexdigest()
+        return s
 
     def descifrar(self,resolverhash,type):
         try:
@@ -42,18 +40,22 @@ class ejercicio5:
     def Preparar_cifrados_ascii(self):
         lineas1=open('codigo-ascii.txt','r')
         lineas2=[]
+        columns=[]
         for linea in lineas1.readlines():
-            lineas2.append(self.cifrar_sha256(linea))
-        cifrados=pd.DataFrame(lineas2)
+            lineas2.append(self.cifrar_sha256(linea.rstrip('\n')))
+            columns.append(linea.rstrip('\n'))
+        cifrados=pd.DataFrame(lineas2,columns)
         return cifrados
 
 
     def Preparar_descifrados_ascii(self):
         lineas1=open('codigo-ascii.txt','r')
         lineas2=[]
+        columns=[]
         for linea in lineas1.readlines():
-            lineas2.append(self.descifrar(self.cifrar_sha256(linea),'sha256'))
-        descifrados=pd.DataFrame(lineas2)
+            lineas2.append(self.descifrar(self.cifrar_sha256(linea.rstrip('\n')),'sha256'))
+            columns.append(linea.rstrip('\n'))
+        descifrados=pd.DataFrame(lineas2,columns)
         return descifrados
 
     def ejecutar(self):
